@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #0B0D10;
+    color: #F3F4F6;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar in charcoal & steel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0D10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #23272F;
+    border-radius: 4px;
+    border: 2px solid #0B0D10;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #353A45;
+  }
+}
+
+/* 3D Depth, Metallic & Graphite Utilities */
+.card-3d {
+  background: #22252A;
+  border: 1px solid rgba(209, 213, 219, 0.14);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 10px 25px -8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-3d:hover {
+  border-color: rgba(209, 213, 219, 0.35);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+    0 18px 35px -10px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Primary Silver Metallic 3D Button */
+.btn-silver-3d {
+  background: linear-gradient(180deg, #E5E7EB 0%, #C5CBD3 100%);
+  color: #17191C;
+  font-weight: 600;
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-silver-3d:hover {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D1D5DB 100%);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 1),
+    0 6px 18px rgba(0, 0, 0, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-silver-3d:active {
+  transform: translateY(0);
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary Graphite 3D Button */
+.btn-graphite-3d {
+  background: #22252A;
+  color: #F3F4F6;
+  border: 1px solid #3A3E45;
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-graphite-3d:hover {
+  background: #292D34;
+  border-color: rgba(209, 213, 219, 0.35);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+    0 6px 16px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+/* 3D Blueprint Border Accents */
+.blueprint-corner {
+  position: relative;
+}
+
+.blueprint-corner::before,
+.blueprint-corner::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+}
+
+.blueprint-corner::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1.5px solid #D1D5DB;
+  border-left: 1.5px solid #D1D5DB;
+}
+
+.blueprint-corner::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1.5px solid #D1D5DB;
+  border-right: 1.5px solid #D1D5DB;
+}
