@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV }) => {
             <div className="pt-2 flex flex-wrap items-center gap-4 w-full sm:w-auto">
               {/* Primary 1: Download actual CV */}
               <a
-                href="/Waleed_Al-Ali_CV.pdf"
+                href={`${import.meta.env.BASE_URL}Waleed_Al-Ali_CV.pdf`}
                 download="Waleed_Al-Ali_CV.pdf"
                 className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold btn-silver-3d rounded-xl flex items-center justify-center gap-2 group cursor-pointer"
               >
@@ -125,12 +125,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV }) => {
                   {/* Layer 4: The Profile Image Container with 4:5 Aspect Ratio */}
                   <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[#1B1D22] flex items-center justify-center shadow-inner">
                     <img
-                      src="/images/me.jpg"
+                      src={`${import.meta.env.BASE_URL}images/me.jpg`}
                       alt="Waleed Al-Ali - IT Support & System Administration Professional"
                       onError={(e) => {
                         const target = e.currentTarget;
                         if (!target.src.endsWith('/me.jpg')) {
-                          target.src = '/me.jpg';
+                          target.src = `${import.meta.env.BASE_URL}me.jpg`;
                         }
                       }}
                       className="w-full h-full object-cover object-top select-none pointer-events-none transition-transform duration-700 hover:scale-[1.01] filter grayscale contrast-[1.08] brightness-[0.98]"
