@@ -44,9 +44,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCV }) => {
             className="flex items-center gap-3 group whitespace-nowrap shrink-0"
             aria-label="Waleed Al-Ali Portfolio Home"
           >
-            <div className="w-10 h-10 rounded-lg bg-[#22252A] border border-[#D1D5DB]/30 shadow-inner flex items-center justify-center transition-all group-hover:border-[#D1D5DB]/60 group-hover:shadow-[0_0_12px_rgba(209,213,219,0.2)]">
-              <span className="font-bold text-sm tracking-wider text-[#F3F4F6] font-mono">WA</span>
-            </div>
             <div className="flex flex-col">
               <span className="text-base font-bold text-[#F3F4F6] tracking-tight group-hover:text-white transition-colors">
                 {PORTFOLIO_DATA.personal.name}
@@ -80,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCV }) => {
             </button>
 
             <a
-              href="/Waleed_Al-Ali_CV.pdf"
+              href={`${import.meta.env.BASE_URL}Waleed_Al-Ali_CV.pdf`}
               download="Waleed_Al-Ali_CV.pdf"
               className="px-4 py-2 text-xs font-semibold btn-silver-3d rounded-lg flex items-center gap-1.5 whitespace-nowrap shrink-0"
             >
