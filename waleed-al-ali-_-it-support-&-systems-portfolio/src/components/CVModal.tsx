@@ -64,7 +64,7 @@ export const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
             </button>
 
             <a
-              href="/Waleed_Al-Ali_CV.pdf"
+              href={`${import.meta.env.BASE_URL}Waleed_Al-Ali_CV.pdf`}
               download="Waleed_Al-Ali_CV.pdf"
               className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold btn-silver-3d rounded-lg"
             >
