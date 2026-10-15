@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCV }) => {
             </a>
             <span>·</span>
             <a 
-              href="/Waleed_Al-Ali_CV.pdf" 
+              href={`${import.meta.env.BASE_URL}Waleed_Al-Ali_CV.pdf`} 
               download="Waleed_Al-Ali_CV.pdf" 
               className="hover:text-[#F3F4F6] transition-colors"
             >
